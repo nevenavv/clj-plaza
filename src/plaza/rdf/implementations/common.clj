@@ -46,6 +46,7 @@
         (= "float" (.toLowerCase (keyword-to-string lit))) XSDDatatype/XSDfloat
         (= "int" (.toLowerCase (keyword-to-string lit))) XSDDatatype/XSDint
         (= "integer" (.toLowerCase (keyword-to-string lit))) XSDDatatype/XSDinteger
+        (= "nonnegativeinteger" (.toLowerCase (keyword-to-string lit))) XSDDatatype/XSDnonNegativeInteger
         (= "long" (.toLowerCase (keyword-to-string lit))) XSDDatatype/XSDlong
         (= "string" (.toLowerCase (keyword-to-string lit))) XSDDatatype/XSDstring
         :else (make-custom-type literal)))))
@@ -70,6 +71,7 @@
          "float" (keyword lit)
          "int" (keyword lit)
          "integer" (keyword lit)
+         "nonNegativeInteger" (keyword lit)
          "long" (keyword lit)
          "string" (keyword lit)
          nil))))
