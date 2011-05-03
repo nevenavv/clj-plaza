@@ -317,7 +317,7 @@ will display a parse error in the :clj handler as well"
                (rabbit/make-queue rabbit-conn name (str "queue-client-" uuid) (str "exchange-" name) uuid)
 
                ;; starting the server
-               (let [tsp (plaza.triple-spaces.server.RemoteTripleSpace. name
+               (let [tsp (RemoteTripleSpace. name
                                                                         (start-triple-server-client (:ts-host opt-map) (:ts-port opt-map))
                                                                         rabbit-conn
                                                                         (assoc opt-map :client-id uuid))]
